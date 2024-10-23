@@ -3,10 +3,10 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.hashers import make_password, check_password
 import re
 
-USER_TYPES = {
-        'driver': 'Driver',
-        'rider': 'Rider'
-}
+USER_TYPES = [
+    ('driver', 'Driver'),
+    ('rider', 'Rider')
+]
 
 # Create your models here.
 class User(models.Model):
